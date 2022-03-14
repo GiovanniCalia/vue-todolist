@@ -5,18 +5,50 @@
 }
 
 #root{
-    width: 400px;
     margin: auto;
+    max-width: 400px;
 }
 
 .box-form{
+    display: flex;
+    flex-wrap: wrap;
     margin: 2rem 0;
-
     text-align: center;
+}
+
+#text, .btn{
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+#text{
+   flex-grow: 1;
+}
+
+.btn{
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.text-list{
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    list-style: none;
 }
 
 .list{
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    padding: 1rem;
+}
+
+.list:hover{
+    background-color: white;
+}
+
+.list button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
