@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    width: 400px;
+    margin: auto;
+}
+
+.box-form{
+    margin: 2rem 0;
+
+    text-align: center;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
