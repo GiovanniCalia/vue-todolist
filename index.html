@@ -18,7 +18,7 @@
         </div>
 
         <ul class="text-list">
-            <li v-for="(element, i) in testi" class="list">
+            <li v-for="(element, i) in testi" @click="addClass" class="list">
                 <div>{{ element }}</div>
                 <button @click="deleteText(i)">&#10005;</button>
             </li>     

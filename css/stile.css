@@ -53,3 +53,7 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+.text-decoration{
+    text-decoration: line-through;
+}

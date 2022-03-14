@@ -1,6 +1,9 @@
 const app = new Vue({
     el: "#root",
     data: {
+        decoration:{
+            textDecoration: "line-through",
+        },
         newTodo: "",
         testi:[
         "Fare i compiti",
@@ -18,5 +21,8 @@ const app = new Vue({
         deleteText(i){
             this.testi.splice(i, 1)
         },
+        addClass(){
+            this.decoration;
+        }
     }
 })
