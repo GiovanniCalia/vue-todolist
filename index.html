@@ -13,14 +13,14 @@
 
     <div id="root">
         <div class="box-form">
-            <input type="text" id="text" placeholder="Nuovo Todo">
-            <button class="btn">Aggiungi</button>
+            <input v-model="newTodo" type="text" id="text" placeholder="Nuovo Todo">
+            <button @click="addText" class="btn">Aggiungi</button>
         </div>
 
         <ul class="text-list">
-            <li v-for="element in testi" class="list">
+            <li v-for="(element, i) in testi" class="list">
                 <div>{{ element }}</div>
-                <button>&#10005;</button>
+                <button @click="deleteText(i)">&#10005;</button>
             </li>     
         </ul>
     </div>
