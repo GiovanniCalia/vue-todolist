@@ -18,8 +18,8 @@
         </div>
 
         <ul class="text-list">
-            <li v-for="(element, i) in testi" @click="addClass" :class="newTodo == done ? `text-barred` : `text-unbarred`" class="list">
-                <div>{{ element }}</div>
+            <li v-for="(element, i) in testi"  @click="addClass" class="list">
+                <div :class="done == true ? `text-barred` : `text-unbarred`">{{ element }}</div>
                 <button @click="deleteText(i)">&#10005;</button>
             </li>     
         </ul>

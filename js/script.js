@@ -1,13 +1,25 @@
 const app = new Vue({
     el: "#root",
     data: {
-        done: true,
+        done: false,
         newTodo: "",
         testi:[
             "Fare i compiti",
             "Fare la spesa",
             "Fare il bucato",
-        ]
+        /*{
+            text: "Fare i compiti",
+            done: true,
+        },
+        {
+            text: "Fare la spesa",
+            done: false,
+        },
+        {
+            text: "Fare il bucato",
+            done: false,
+        },*/
+        ],
     },
     methods: {
         addText(){
@@ -23,7 +35,7 @@ const app = new Vue({
             this.addText();
         },
         addClass(){
-            this.done == false;  
+            this.done = true; 
         }
     }
 })
