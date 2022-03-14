@@ -18,20 +18,10 @@
         </div>
 
         <ul class="text-list">
-            <li class="list">
-                <div class="">Fare i compiti</div>
+            <li v-for="element in testi" class="list">
+                <div>{{ element }}</div>
                 <button>&#10005;</button>
-            </li>
-            <li class="list">
-                <div>Fare la spesa</div>
-                <button>&#10005;</button>
-            </li>
-            <li class="list">
-                <div>Fare il bucato</div>
-                <button>&#10005;</button>
-            </li>
-
-            
+            </li>     
         </ul>
     </div>
 
