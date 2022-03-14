@@ -23,6 +23,9 @@ const app = new Vue({
         },
         addClass(){
             this.decoration;
+        },
+        addTodo(){
+            this.addText()
         }
     }
 })

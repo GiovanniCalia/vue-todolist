@@ -13,7 +13,7 @@
 
     <div id="root">
         <div class="box-form">
-            <input v-model="newTodo" type="text" id="text" placeholder="Nuovo Todo">
+            <input v-model="newTodo" @keydown.enter="addTodo" type="text" id="text" placeholder="Nuovo Todo">
             <button @click="addText" class="btn">Aggiungi</button>
         </div>
 
