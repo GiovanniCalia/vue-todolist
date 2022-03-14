@@ -10,10 +10,13 @@ const app = new Vue({
     },
     methods: {
         addText(){
-            this.testi.push(this.newTodo)
+            if (this.newTodo != ""){
+            this.testi.push(this.newTodo);
+            this.newTodo = ""
+        }
         },
         deleteText(i){
             this.testi.splice(i, 1)
-        }
+        },
     }
 })
