@@ -39,9 +39,12 @@
 
 .list{
     display: flex;
-    justify-content: space-between;
     padding: 1rem;
     border-bottom: 1px solid black;
+}
+
+.div-grow{
+    flex-grow: 1;
 }
 
 .list:hover{
@@ -54,10 +57,6 @@
     cursor: pointer;
 }
 
-.text-barred{
+.textBarred{
     text-decoration: line-through;
-}
-
-.text-unbarred{
-    text-decoration: none;
 }

@@ -2,12 +2,12 @@ const app = new Vue({
     el: "#root",
     data: {
         done: false,
-        newTodo: "",
+        newTodo: {
+            text: "",
+            done: false,
+        },
         testi:[
-            "Fare i compiti",
-            "Fare la spesa",
-            "Fare il bucato",
-        /*{
+        {
             text: "Fare i compiti",
             done: true,
         },
@@ -18,14 +18,14 @@ const app = new Vue({
         {
             text: "Fare il bucato",
             done: false,
-        },*/
+        },
         ],
     },
     methods: {
         addText(){
-            if (this.newTodo != ""){
-            this.testi.push(this.newTodo);
-            this.newTodo = "";
+            if (this.newTodo.text != ""){
+            this.testi.unshift({...this.newTodo});
+            this.newTodo.text = "";
         }
         },
         deleteText(i){
@@ -34,8 +34,8 @@ const app = new Vue({
         addTodo(){
             this.addText();
         },
-        addClass(){
-            this.done = true; 
+        addClass(event){
+            event.done = !event.done; 
         }
     }
 })

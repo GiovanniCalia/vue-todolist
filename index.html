@@ -13,13 +13,13 @@
 
     <div id="root">
         <div class="box-form">
-            <input v-model="newTodo" @keydown.enter="addTodo" type="text" id="text" placeholder="Nuovo Todo">
-            <button @click="addText" class="btn">Aggiungi</button>
+            <input v-model.trim="newTodo.text" @keydown.enter="addTodo" type="text" id="text" placeholder="Nuovo Todo">
+            <button @click="addTodo" class="btn">Aggiungi</button>
         </div>
 
         <ul class="text-list">
-            <li v-for="(element, i) in testi"  @click="addClass" class="list">
-                <div :class="done == true ? `text-barred` : `text-unbarred`">{{ element }}</div>
+            <li v-for="(element, i) in testi" class="list">
+                <div :class="{textBarred: element.done}" @click="addClass(element)" class="div-grow">{{ element.text }}</div>
                 <button @click="deleteText(i)">&#10005;</button>
             </li>     
         </ul>
